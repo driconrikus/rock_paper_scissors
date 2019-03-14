@@ -23,7 +23,7 @@ function playRound(userSel) {
         (userSel == 'paper' && cpuSel == 'rock')) {
         
         userScore += 1
-        result = ('<br><br><strong>You win!</strong><br> ' + ' You chose: ' + userSel + ' <br>CPU chose: ' + cpuSel + '.'
+        result = ('<br><br><strong>You win!</strong><br> ' + ' You chose: ' + userSel + '.' + ' <br>CPU chose: ' + cpuSel + '.'
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (userScore == 5) {
@@ -37,7 +37,7 @@ function playRound(userSel) {
     }
     else {
         cpuScore += 1
-        result = ('<br><br><strong>You lose!</strong><br> ' + 'You chose:' + userSel + '<br> CPU chose: ' + cpuSel + '.'
+        result = ('<br><br><strong>You lose!</strong><br> ' + 'You chose: ' + userSel + '.' + '<br> CPU chose: ' + cpuSel + '.'
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (cpuScore == 5) {
