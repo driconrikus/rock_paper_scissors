@@ -13,6 +13,7 @@ function disableButtons() {
     })
 }
 
+
 function playRound(userSel) {
     let cpuSel = computerPlay()
     let result = ""
@@ -26,12 +27,12 @@ function playRound(userSel) {
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (userScore == 5) {
-            result += '<br><br><strong><p style="color:green">You win the game!</p></strong>Press the Restart button to play again.'
+            result += '<br><br><img src="assets/win.png" height="32" width="32"><br><strong><p style="color:green">You win the game!</p></strong>Press the <strong>Restart</strong> button to play again.'
             disableButtons()
         }
     }
     else if (userSel == cpuSel) {
-        result = ('<br><br><strong>It\'s a tie!</strong><br>You both chose ' + userSel + '.'
+        result = ('<br><br><strong>DRAW!</strong><br>You both chose ' + userSel + '.'
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
     }
     else {
@@ -40,7 +41,7 @@ function playRound(userSel) {
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (cpuScore == 5) {
-            result += '<br><br><strong><p style="color:red">CPU wins the game!</p></strong>Press the Restart button to play again.'
+            result += '<br><br><img src="assets/lose.png" height="32" width="32"><br><strong><p style="color:red">CPU wins the game!</p></strong>Press the <strong>Restart</strong> button to play again.'
             disableButtons()
         }
     }
@@ -54,4 +55,3 @@ buttons.forEach(button =>{
         playRound(button.value)
     })
 })
-
