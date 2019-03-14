@@ -1,6 +1,6 @@
 let userScore = 0
 let cpuScore = 0
-const buttons = document.querySelectorAll('button')
+const buttons = document.querySelectorAll('.play')
 
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors']
@@ -54,3 +54,4 @@ buttons.forEach(button =>{
         playRound(button.value)
     })
 })
+
