@@ -22,11 +22,11 @@ function playRound(userSel) {
         (userSel == 'paper' && cpuSel == 'rock')) {
         
         userScore += 1
-        result = ('<br><br><strong>You win!</strong><br> ' + userSel + ' beats ' + cpuSel + '.'
+        result = ('<br><br><strong>You win!</strong><br> ' + ' You chose: ' + userSel + ' <br>CPU chose: ' + cpuSel + '.'
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (userScore == 5) {
-            result += '<br><br><strong><p style="color:green">Victory!</p></strong>Press the Restart button to play again.'
+            result += '<br><br><strong><p style="color:green">You win the game!</p></strong>Press the Restart button to play again.'
             disableButtons()
         }
     }
@@ -36,7 +36,7 @@ function playRound(userSel) {
     }
     else {
         cpuScore += 1
-        result = ('<br><br><strong>You lose!</strong><br> ' + cpuSel + ' beats ' + userSel + '.'
+        result = ('<br><br><strong>You lose!</strong><br> ' + 'You chose:' + userSel + '<br> CPU chose: ' + cpuSel + '.'
             + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (cpuScore == 5) {
