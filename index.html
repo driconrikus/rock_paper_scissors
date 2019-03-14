@@ -7,20 +7,23 @@
 <body>
     <div class="container">
     <h1>JS Rock, Paper, Scissors!</h1>
+    <p><em>Score 5 points to win!</em></p>
+    <br>
+    <button value="rock"><img src="assets/rock.png" height="22" width="22"><br>Rock</button>
+    <button value="paper"><img src="assets/paper.png" height="22" width="22">Paper</button>
+    <button value="scissors"><img src="assets/scissors.png" height="22" width="22">Scissors</button>
+    <br>
+    <div id="result">
+        <p></p>
+    </div>
     <br>
     <br>
-    <button value="rock">Rock</button>
-    <button value="paper">Paper</button>
-    <button value="scissors">Scissors</button>
-    <br>
-    <div id="result"></div>
-    <br>
-    <p>Score five points to win!</p>
-    <br>
+    <div class="reset"> 
+            <button class="resetBtn" onclick="window.location.href = 'index.html'">Restart</button>
+            <br>
+        </div>
     </div>
     <script type="text/javascript" src="index.js"></script>
-    <div class="reset"> 
-        <button value="reset" onclick="window.location.href = 'index.html'">Restart game</button>
-    </div>
+ 
 </body>
 </html>

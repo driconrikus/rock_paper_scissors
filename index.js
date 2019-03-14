@@ -1,5 +1,5 @@
-let userScore = 0;
-let cpuScore = 0;
+let userScore = 0
+let cpuScore = 0
 const buttons = document.querySelectorAll('button')
 
 function computerPlay() {
@@ -13,34 +13,34 @@ function disableButtons() {
     })
 }
 
-function playRound(playerSelection) {
-    let computerSelection = computerPlay()
+function playRound(userSel) {
+    let cpuSel = computerPlay()
     let result = ""
 
-    if ((playerSelection == 'rock' && computerSelection == 'scissors') ||
-        (playerSelection == 'scissors' && computerSelection == 'paper') ||
-        (playerSelection == 'paper' && computerSelection == 'rock')) {
+    if ((userSel == 'rock' && cpuSel == 'scissors') ||
+        (userSel == 'scissors' && cpuSel == 'paper') ||
+        (userSel == 'paper' && cpuSel == 'rock')) {
         
         userScore += 1
-        result = ('You win! ' + playerSelection + ' beats ' + computerSelection
+        result = ('<br><br><strong>You win!</strong><br> ' + userSel + ' beats ' + cpuSel + '.'
             + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
 
         if (userScore == 5) {
-            result += '<br><br>You won the game! Press the Restart button to play again.'
+            result += '<br><br><strong>Victory!</strong> <br>Press the Restart button to play again.'
             disableButtons()
         }
     }
-    else if (playerSelection == computerSelection) {
-        result = ('It\'s a tie. You both chose ' + playerSelection
+    else if (userSel == cpuSel) {
+        result = ('<br><br><strong>It\'s a tie!</strong><br>You both chose ' + userSel + '.'
             + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
     }
     else {
         cpuScore += 1
-        result = ('You lose! ' + computerSelection + ' beats ' + playerSelection
+        result = ('<br><br><strong>You lose!</strong><br> ' + cpuSel + ' beats ' + userSel + '.'
             + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
 
         if (cpuScore == 5) {
-            result += '<br><br>CPU wins the game! Press the Restart button to play again.'
+            result += '<br><br><strong>CPU wins the game!</strong> <br>Press the Restart button to play again.'
             disableButtons()
         }
     }
