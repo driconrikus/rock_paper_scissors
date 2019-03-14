@@ -23,24 +23,24 @@ function playRound(userSel) {
         
         userScore += 1
         result = ('<br><br><strong>You win!</strong><br> ' + userSel + ' beats ' + cpuSel + '.'
-            + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
+            + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (userScore == 5) {
-            result += '<br><br><strong>Victory!</strong> <br>Press the Restart button to play again.'
+            result += '<br><br><strong><p style="color:green">Victory!</p></strong>Press the Restart button to play again.'
             disableButtons()
         }
     }
     else if (userSel == cpuSel) {
         result = ('<br><br><strong>It\'s a tie!</strong><br>You both chose ' + userSel + '.'
-            + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
+            + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
     }
     else {
         cpuScore += 1
         result = ('<br><br><strong>You lose!</strong><br> ' + cpuSel + ' beats ' + userSel + '.'
-            + "<br><br>Player score: " + userScore + "<br>Computer score: " + cpuScore)
+            + "<br><br>Player score: " + userScore + "<br>CPU score: " + cpuScore)
 
         if (cpuScore == 5) {
-            result += '<br><br><strong>CPU wins the game!</strong> <br>Press the Restart button to play again.'
+            result += '<br><br><strong><p style="color:red">CPU wins the game!</p></strong>Press the Restart button to play again.'
             disableButtons()
         }
     }
