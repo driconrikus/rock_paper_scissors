@@ -1,19 +1,22 @@
+// User score and CPU scores, play buttons variables 
 let userScore = 0;
 let cpuScore = 0;
 const buttons = document.querySelectorAll('.play');
 
+// This function enables the computer to play the game.
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors'];
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
+// This function will disable play buttons after you or the computer reaches five points.
 function disableButtons() {
     buttons.forEach(elem => {
         elem.disabled = true;
     })
 }
 
-
+// This function will enable you to play the game and  the computer to make a move after you. The contents of this function should be self-explanatory.
 function playRound(userSel) {
     let cpuSel = computerPlay();
     let result = "";
@@ -43,12 +46,15 @@ function playRound(userSel) {
         }
     }
 
+// This will print the results.
     document.getElementById('result').innerHTML = result;
     return;
 }
 
+// Event listener for the play buttons to work.
 buttons.forEach(button =>{
     button.addEventListener('click', function(){
         playRound(button.value);
     })
 })
+ 
