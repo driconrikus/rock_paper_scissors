@@ -37,7 +37,7 @@ body {
 
 .resetBtn {
     border-radius: 10px;
-    background-color: firebrick;
+    background-color: red;
     color: white;
     margin-bottom: 20px;
 }
